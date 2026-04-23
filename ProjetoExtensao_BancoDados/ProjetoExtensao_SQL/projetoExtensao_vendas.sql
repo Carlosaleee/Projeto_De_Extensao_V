@@ -12,16 +12,19 @@ INSERT INTO itemVenda (nomeEsquadria, quantidade, valorMetroQuadrado, altura, la
 VALUES
 ( 'Tela de Proteção', 2, 160.00, 1.00, 0.75, 120.00, 240.00, 1, 1);
 
-INSERT INTO pagamento (idPagamento, dataPagamento, tipoPagamento, vendaId, numeroCartao, numeroParcelas)
+INSERT INTO pagamento (idPagamento, dataPagamento, tipoPagamento,  numeroCartao, numeroParcelas, vendaId)
 VALUES 
-(1, '2022-03-02 08:10:00', 'D', '1', null, null );
+(1, '2022-03-02 08:10:00', 'D', '000.000.000-00', '3', 1 );
+
+SELECT * FROM pagamento;
+SELECT * FROM venda;
 
 -- ------------------------------------------------
 -- ------------------------------------------------
 
-INSERT INTO venda (idVenda, dataVenda, dataEntrega, valorTotal, clienteId, funcionarioId)
+INSERT INTO venda (idVenda, dataVenda, dataEntrega, valorTotal, clienteId, funcionarioId, dataPagamento, tipoPagamento, numeroCartao, numeroParcelas)
 VALUES 
-(2, '2022-04-04 09:30:00', '2022-04-20 11:30:00', 1083.00, 2, 5  );
+(2, '2022-04-04 09:30:00', '2022-04-20 11:30:00', 1083.00, 2, 5 , '2022-03-02 08:10:00', 'C','515.044.323-75', '3' );
 
 INSERT INTO itemVenda (nomeEsquadria, quantidade, valorMetroQuadrado, altura, largura, valorUnitario, subTotal, vendaId, esquadriaId)
 VALUES
@@ -50,9 +53,9 @@ VALUES
 -- -------------------------------------------------
 -- ------------------------------------------------
 
-INSERT INTO venda (idVenda, dataVenda, dataEntrega, valorTotal, clienteId, funcionarioId)
+INSERT INTO venda (idVenda, dataVenda, dataEntrega, valorTotal, clienteId, funcionarioId, dataPagamento, tipoPagamento, numeroCartao, numeroParcelas)
 VALUES 
-(4, '2022-05-25 10:00:00', '2022-07-02 17:00:00', 9994.20, 3, 5  );
+(4, '2022-05-25 10:00:00', '2022-07-02 17:00:00', 9994.20, 3, 5, '2022-05-25 10:00:00', 'C', 876238837875, '10'  );
 
 INSERT INTO itemVenda (nomeEsquadria, quantidade, valorMetroQuadrado, altura, largura, valorUnitario, subTotal, vendaId, esquadriaId)
 VALUES
@@ -63,7 +66,7 @@ VALUES
 
 INSERT INTO pagamento (idPagamento, dataPagamento, tipoPagamento, vendaId, numeroCartao, numeroParcelas)
 VALUES 
-(4, '2022-05-25 10:00:00', 'C', '4', 876238837875, 10 );
+(4, '2022-05-25 10:00:00', 'C', 876238837875, '10' );
 
 -- -------------------------------------------------
 -- ------------------------------------------------

@@ -11,5 +11,6 @@ SELECT * FROM esquadria;
 SELECT * FROM venda;
 SELECT * FROM distribuidorAluminio;
 SELECT * FROM telefoneDistribuidor;
+SELECT * FROM pagamento;
 
  
